@@ -10,7 +10,7 @@ import pygame
 pygame.init()
 pygame.mixer.init()
 
-
+openai.api_key = "Inserta tu API Key de OpenAI"
 prompt_setup = """Simula ser un asistente de voz que se llama Pez. 
 Puedes reproducir musica, decir el dia, la hora y buscar en google, ademas de tener conversaciones con el usuario.
 No es necesario que te presentes cada que hables.
@@ -19,9 +19,9 @@ Esto fue lo que te dijo el usuario: """
 talker = Talker()
 listener = Listener()
 spotify_player = SpotifyPlayer(
-    client_id='', 
-    client_secret='', 
-    redirect_uri='http://localhost:3036',
+    client_id='AQUI VA TU CLIENT ID DE SPOTIFY', 
+    client_secret='AQUI VA TU CLIENT SECRET DE SPOTIFY', 
+    redirect_uri='AGREGA TU REDIRECT URI DE SPOTIFY',
     scope='user-read-playback-state,user-modify-playback-state,streaming')
 
 # Funcion principal
@@ -104,14 +104,13 @@ root.configure(bg="#343140")
 label = Label(root, text="Pez", font=("Consolas", 70), bg="#343140", fg="white")
 label.pack()
 
+# Imagen de Pez
+archivo = "pez.png"  # Cambia este nombre al nombre de tu archivo PNG
+frame = PhotoImage(file=archivo)
 
 # Imagen de Pez
 """framesNum = 20 # Numero de frames que tiene el gif, si no lo conoces ir haciendo tentativos.
 archivo = "pez.gif" """
-
-# Imagen de Pez
-archivo = "PEZ.png"  # Cambia este nombre al nombre de tu archivo PNG
-frame = PhotoImage(file=archivo)
 
 # Lista de todas las imagenes del gif
 """frames = [PhotoImage(file=archivo, format='gif -index %i' %(i)) for i in range(framesNum)]
