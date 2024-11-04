@@ -1,25 +1,37 @@
-# Pez: Asistente Personal 
+# Pez: Asistente Personal Basado en Arduino y Python
 
-**Pez** es un asistente personal basado en Arduino y Python que utiliza hardware y software para realizar varias funciones, desde control de luces LED RGB hasta reproducción de música y videos a través de integración con Spotify y YouTube. Este proyecto se centra en crear un asistente personalizado que amplíe sus capacidades con comandos de voz y API.
+**Pez** es un asistente personal que combina hardware y software, diseñado para ejecutar múltiples tareas mediante comandos de voz. Este asistente está basado en Arduino y Python y permite desde el control de luces LED RGB y un motor hasta la reproducción de música y videos mediante integración con Spotify y YouTube, además de realizar búsquedas en internet y generar respuestas conversacionales.
 
 ## Funcionalidades
 
-- **Control de LEDs RGB**: Enciende luces de diferentes colores según comandos de voz.
-- **Reproducción de Música y Video**: Controla Spotify y YouTube mediante comandos de voz.
-- **Búsqueda en Internet**: Realiza búsquedas en Google a través de comandos de voz.
-- **Interacciones Inteligentes**: Usa la API de OpenAI para generar respuestas conversacionales.
+- **Control de LEDs RGB**: Enciende y apaga luces de diferentes colores en respuesta a comandos.
+- **Control de Motor y Servo**: Realiza acciones mecánicas controlando un motor DC y un servo, con comandos como encender y apagar el motor y abrir o cerrar una puerta.
+- **Reproducción de Música y Video**: Controla la reproducción en Spotify y YouTube mediante comandos de voz.
+- **Búsqueda en Internet**: Ejecuta búsquedas en Google usando comandos de voz.
+- **Interacciones Inteligentes**: Usa la API de OpenAI para respuestas conversacionales en tiempo real.
+  
+## Componentes de Hardware
+
+1. **Arduino** para el control de hardware.
+   - **Motor DC**: Controlado mediante un puente H y modulación PWM.
+   - **Servo Motor**: Control para la apertura y cierre de puertas.
+   - **LED RGB**: LED que cambia de color según comandos.
+2. **Microfono**: Captura comandos de voz para su procesamiento.
 
 ## Tecnologías Utilizadas
 
-- **Arduino** para el control de hardware.
-- **Python** para procesamiento de comandos y manejo de APIs.
-- **Spotify API** para reproducción de música.
-- **OpenAI API** para interacciones de voz inteligentes.
-
+- **Arduino** para control y manipulación de hardware.
+- **Python** para procesamiento de comandos, gestión de APIs y procesamiento de voz.
+- **Spotify API** para reproducción y control de música.
+- **OpenAI API** para interacciones y respuestas conversacionales.
+ 
 ## Resultados y Mejoras
-Resultados Actuales: Pez permite controlar luces, reproducir contenido y realizar búsquedas en internet con comandos de voz. La integración con Arduino y las APIs facilita la gestión de dispositivos y mejora la interactividad.
 
-Posibles Mejoras:
- * Optimizar el reconocimiento de voz para mayor precisión.
- * Ampliar las funciones de IA con más capacidad conversacional.
+**Resultados Actuales**: Pez permite controlar dispositivos físicos como motores y LEDs, y gestionar contenido multimedia mediante comandos de voz. La integración con Arduino y varias APIs proporciona una experiencia interactiva y personalizada.
 
+**Posibles Mejoras**:
+- Optimizar el reconocimiento de voz para mayor precisión en comandos.
+- Expandir las capacidades de IA para mejorar la interacción conversacional.
+- Agregar sensores adicionales para un asistente más reactivo.
+  
+---
