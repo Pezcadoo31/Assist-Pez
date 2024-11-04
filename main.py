@@ -106,24 +106,32 @@ label.pack()
 
 
 # Imagen de Pez
-framesNum = 20 # Numero de frames que tiene el gif, si no lo conoces ir haciendo tentativos.
-archivo = "pez.gif"
+"""framesNum = 20 # Numero de frames que tiene el gif, si no lo conoces ir haciendo tentativos.
+archivo = "pez.gif" """
+
+# Imagen de Pez
+archivo = "PEZ.png"  # Cambia este nombre al nombre de tu archivo PNG
+frame = PhotoImage(file=archivo)
 
 # Lista de todas las imagenes del gif
-frames = [PhotoImage(file=archivo, format='gif -index %i' %(i)) for i in range(framesNum)]
+"""frames = [PhotoImage(file=archivo, format='gif -index %i' %(i)) for i in range(framesNum)]
 
 def update(ind):
-    """ Actualiza la imagen gif """
+    """" Actualiza la imagen gif """"
     frame = frames[ind]
     ind += 1
     if ind == framesNum:
         ind = 0
     canvas.create_image(0, 0, image=frame, anchor=NW)
-    root.after(80, update, ind) # Numero que regula la velocidad del gif
+    root.after(80, update, ind) # Numero que regula la velocidad del gif 
 
 canvas = Canvas(width=600, height=338, bg='#343140', highlightthickness=0) # Modificar segun el tamaño de la imagen
 canvas.pack(pady=100)
-root.after(0, update, 0)
+root.after(0, update, 0) """
+
+canvas = Canvas(width=600, height=338, bg='#343140', highlightthickness=0) # Modificar según el tamaño de la imagen
+canvas.pack(pady=100)
+canvas.create_image(0, 0, image=frame, anchor=NW)
 
 # Escuchar
 btnRun=Button(root,text="Escuchar", font=("Consolas", 30), bg='#f77e06', command=run)
